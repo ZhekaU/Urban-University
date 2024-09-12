@@ -6,7 +6,7 @@ grades_2=sum(grades [1])/(len(grades[1]))
 grades_3=sum(grades [2])/(len(grades[2]))
 grades_4=sum(grades [3])/(len(grades[3]))
 grades_5=sum(grades [4])/(len(grades[4]))
-average_rating=dict(zip(students_1, grades_1,grades_2,grades_3,grades_4,grades_5))
+general_assessment=grades_1,grades_2,grades_3,grades_4,grades_5
+average_rating=dict(zip(students_1,general_assessment))
 
 print(average_rating)
-
