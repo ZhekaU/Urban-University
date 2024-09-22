@@ -9,6 +9,6 @@ for i in range(1, random_number_1):
             pairs.append((i, j))
 result = ''
 for i, j in pairs:
-    result += f"({i},{j})"
+    result += f"{i}{j}"
 print("Пары чисел:")
 print(result)
