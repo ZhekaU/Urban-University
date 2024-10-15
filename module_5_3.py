@@ -13,32 +13,26 @@ class House:
     def __eq__(self, other):
         if isinstance(other, House):
             return self.number_of_floors == other.number_of_floors
-        return True
 
     def __lt__(self, other):
         if isinstance(other, House):
             return self.number_of_floors < other.number_of_floors
-        return False
 
     def __le__(self, other):
         if isinstance(other, House):
             return self.number_of_floors <= other.number_of_floors
-        return True
 
     def __gt__(self, other):
         if isinstance(other, House):
             return self.number_of_floors > other.number_of_floors
-        return False
 
     def __ge__(self, other):
         if isinstance(other, House):
             return self.number_of_floors >= other.number_of_floors
-        return True
 
     def __ne__(self, other):
         if isinstance(other, House):
             return self.number_of_floors != other.number_of_floors
-        return False
 
     def __add__(self, value):
         if isinstance(value, int):
@@ -49,7 +43,7 @@ class House:
         return self.__add__(value)
 
     def __iadd__(self, value):
-        return self
+        return self.__add__(value)
 
     def __str__(self):
         return (f'Название: {self.name} ,кол-во этажей: {self.number_of_floors}')
@@ -58,8 +52,8 @@ class House:
         return self.number_of_floors
 
 
-ph1 = House('ЖК Грани', 20)
-ph2 = House('Коттеджный поселок Гармония', 30)
+ph1 = House('ЖК Грани', 44)
+ph2 = House('Коттеджный поселок Гармония', 32)
 # ph1.go_to(3)
 # ph2.go_to(5)
 print(ph1)
