@@ -5,7 +5,7 @@ from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.dispatcher import FSMContext
 
 
-api = '7779139241:AAF5Z4Ad1dN9nffu-2ix9aNY2tDDRMNsnRM'
+api = 'Ключ бота'
 bot = Bot(token = api)
 dp = Dispatcher(bot, storage= MemoryStorage())
 
@@ -15,7 +15,7 @@ class UserState(StatesGroup):
     weight = State()
 
 
-@dp.message_handler(text='Сколько жрать')
+@dp.message_handler(text='Calories')
 async def set_age(message):
     await message.answer('Введите свой возраст:')
     await UserState.age.set()
